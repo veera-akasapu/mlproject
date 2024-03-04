@@ -15,7 +15,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path=os.path.join("artifact",'preprocessor.pkl')
+    preprocessor_obj_file_path=os.path.join("artifacts",'preprocessor.pkl')
 
 class DataTrasformation:
     def __init__(self):
@@ -98,7 +98,7 @@ class DataTrasformation:
             ]
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
-            logging.info(f"saved preprocessing object.")
+            logging.info(f"saved preprocessing object")
 
             save_object(
                 file_path=self.data_transformation_config.preprocessor_obj_file_path,
